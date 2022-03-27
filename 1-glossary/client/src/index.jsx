@@ -23,6 +23,13 @@ class App extends React.Component {
 
   search (term) {
     axios.post('/words', {term: term})
+
+    // axios.get('/words')
+    //   .then((data)=>{
+    //     this.setState({
+    //       words: data.data
+    //     })
+    //   })
   }
 
   render() {

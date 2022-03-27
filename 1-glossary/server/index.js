@@ -18,7 +18,7 @@ app.post('/words', (req, res) => {
           res.send(err);
         } else if (!doesExist) {
           db.save(data);
-          res.send('added new word!')
+          res.send(data)
         } else {
           res.send('Already exists')
         }
@@ -36,7 +36,6 @@ app.get('/words', (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      console.log(data)
       res.send(data);
     }
   })

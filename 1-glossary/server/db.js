@@ -24,13 +24,9 @@ let save = (word) => {
 
 let exists = (word, cb) => {
   Word.findOne({value: word}, (err, data)=>{
-
-    console.log('data', data);
-    console.log(err);
     if(err) {
-       cb(err, null);
+      cb(err, null);
     } else {
-
       cb(null, data);
     }
   })

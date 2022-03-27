@@ -11,8 +11,8 @@ class Word extends React.Component {
   render() {
     return (
       <li>
-        {this.props.word.value}:{'\n'}
-        {this.props.word.define}
+        {this.props.word.value}:
+        {'\n' + this.props.word.define}
       </li>
     )
   }
